@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Javascript</title>
+    <style>
+        #set{
+            height:700px;
+            background-color:deepskyblue;
+            background-image: linear-gradient(black,white);
+        }
+        h1{
+            color:red;
+            text-align: center;
+        }
+        #myImage{
+            align-items: center;
+            position: relative;
+            left:500px;
+        }
+        .bt{
+            font-size: 27px;
+            position: relative;
+            left:670px;
+            color:white;
+            background-color: black;
+            border:solid 1px white;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div id="set"> <br/> 
+       <h1>CLOCK</h1>
+        <hr/>
+<script>
+function light(sw) {
+  var pic;
+  if (sw == 0) {
+    pic ="pic/stif.jpeg"
+  } else {
+    pic = "pic/move.gif"
+  }
+  document.getElementById('myImage').src = pic;
+}
+</script>
+<br/>
+<img id="myImage" src="pic/stif.jpeg" width="500" height="480" align="center">
+
+<p>
+<button type="button" onclick="light(1)" class="bt">Start</button>
+<button type="button" onclick="light(0)" class="bt">Stop</button>
+</p>
+    </div>
+</body>
+</html>

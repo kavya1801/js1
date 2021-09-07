@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>Inline JavaScript</title>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        #set{
+            height:700px;
+            background-color:deepskyblue;
+            background-image: linear-gradient(red,yellow);
+            align-items: center;
+        }
+        label{
+            font-size: 22px;
+            font-weight: 600;
+            font-style: italic;
+        }
+        #name{
+            width:300px;
+        }
+    </style>
+</head>
+	
+<body>
+	<div class="container "  id="set" align=center>
+        <br/> <br/>
+		<h1 style="text-align:center;color:white;">
+		Login Page 
+	</h1> <hr/> <br/>
+		<form>
+			<div class="form-group">
+				<label for="">Enter Your Name:</label>
+				<input id="name"
+					class="form-control"
+					type="text"
+					placeholder="Input Your Name Here">
+			</div> <br/>
+            <div class="form-group">
+				<label for="">Enter Your Email:</label>
+				<input id="name"
+					class="form-control"
+					type="text"
+					placeholder="Input Your Email Here">
+			</div> <br/>
+            <div class="form-group">
+				<label for="">Enter Your DOB:</label>
+				<input id="name"
+					class="form-control"
+					type="date"
+					placeholder="Input Your DOB Here">
+			</div> <br/>
+			<div class="form-group">
+				<button id="btn-alert"
+						class="btn btn-success btn-lg float-right"
+						type="submit">
+					Submit
+				</button>
+			</div>
+		</form>
+	</div>
+	<script>
+		var user_name = document.getElementById("name");
+		document.getElementById("btn-alert").addEventListener("click", function(){
+			var value=user_name.value.trim();
+			if(!value)
+				alert("Name Cannot be empty!");
+			else
+				alert("Hello, " + value + "!\nWelcome to our page. ");
+		});
+	</script>
+</body>
+
+</html>

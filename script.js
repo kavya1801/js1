@@ -1,0 +1,3 @@
+function myFunction() {
+    document.getElementById("demo").innerHTML="<b>External JavaScript : </b> <br/> If you are going to define a functionality which will be used in various HTML documents then it's better to keep that functionality in a separate JavaScript file and then include that file in your HTML documents. A JavaScript file will have extension as .js and it will be included in HTML files using script tag.  <br/> <br/>  <b> Internal Script :   <br/> </b> You can write your script code directly into your HTML document. Usually we keep script code in header of the document using script tag, otherwise there is no restriction and you can put your source code anywhere in the document but inside script tag.";
+}
